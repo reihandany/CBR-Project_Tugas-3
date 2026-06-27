@@ -1,19 +1,19 @@
-===== HASIL EVALUASI RETRIEVAL =====
+# Laporan Visualisasi dan Evaluasi Retrieval
 
-Jumlah Query      : 8
-TF-IDF Hit Rate   : 1.000
-SVM Hit Rate      : 1.000
-BERT-like Hit Rate: 1.000
+## Tabel metrik per model
 
-===== RINGKASAN METRIK =====
+```text
           model  n_queries  hit_rate  precision@5  recall  top1_accuracy
          TF-IDF          8       1.0          0.2     1.0            1.0
             SVM          8       1.0          0.2     1.0            1.0
 BERT-like proxy          8       1.0          0.2     1.0            1.0
+```
 
-===== ANALISIS KESALAHAN =====
-## TF-IDF
-- Gagal: 0 dari 8 query
+## Plot performa
+
+Grafik disimpan pada data/results\performance_chart.png.
+
+## Diskusi kasus kegagalan
 
 ## SVM
 - Gagal: 0 dari 8 query

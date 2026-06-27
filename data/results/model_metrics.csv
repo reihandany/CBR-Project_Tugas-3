@@ -1,0 +1,4 @@
+﻿model,n_queries,hit_rate,precision@5,recall,top1_accuracy
+TF-IDF,8,1.0,0.2,1.0,1.0
+SVM,8,1.0,0.2,1.0,1.0
+BERT-like proxy,8,1.0,0.2,1.0,1.0
