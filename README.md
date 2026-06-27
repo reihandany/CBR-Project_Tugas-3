@@ -20,19 +20,37 @@ Repository untuk tugas Computer-Based Reasoning (CBR) menggunakan putusan pidana
 
 ## Penggunaan
 
-1. Aktifkan virtual environment:
+### 1. Prasyarat
 
-```bash
-source venv/Scripts/activate
+- Python 3.10+ terpasang di sistem.
+- Akses ke command line (PowerShell / Command Prompt / Bash).
+
+### 2. Siapkan virtual environment
+
+Untuk Windows:
+
+```powershell
+python -m venv venv
+venv\Scripts\Activate.ps1
 ```
 
-2. Pasang dependensi:
+Untuk Linux / macOS:
 
 ```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### 3. Pasang dependensi
+
+```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-3. Jalankan masing-masing notebook sesuai urutan:
+### 4. Jalankan pipeline end-to-end
+
+Jalankan semua skrip notebook satu per satu sesuai urutan berikut:
 
 ```bash
 python notebooks/01_case_base.py
@@ -42,8 +60,51 @@ python notebooks/04_case_reuse.py
 python notebooks/05_evaluation.py
 ```
 
+Atau dalam satu perintah batch di PowerShell:
+
+```powershell
+python notebooks/01_case_base.py; `
+python notebooks/02_case_representation.py; `
+python notebooks/03_case_retrieval.py; `
+python notebooks/04_case_reuse.py; `
+python notebooks/05_evaluation.py
+```
+
+### 5. Contoh perintah
+
+- Menyiapkan basis kasus:
+
+```bash
+python notebooks/01_case_base.py
+```
+
+- Membuat representasi kasus terstruktur:
+
+```bash
+python notebooks/02_case_representation.py
+```
+
+- Melatih model retrieval dan membuat query evaluasi:
+
+```bash
+python notebooks/03_case_retrieval.py
+```
+
+- Mengambil kasus serupa dan merekomendasikan putusan:
+
+```bash
+python notebooks/04_case_reuse.py
+```
+
+- Mengevaluasi hasil retrieval:
+
+```bash
+python notebooks/05_evaluation.py
+```
+
 ## Catatan
 
 - Dataset utama sekarang menggunakan `data/processed/cases.json`.
 - File `cases.csv` tidak lagi digunakan dalam alur utama.
 - Tambahkan `venv/`, `__pycache__/`, dan file notebook checkpoint ke `.gitignore`.
+- Jika Anda mengalami error dependency, pastikan virtual environment aktif dan jalankan kembali `pip install -r requirements.txt`.
