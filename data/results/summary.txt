@@ -1,0 +1,6 @@
+===== HASIL EVALUASI =====
+
+Jumlah Query      : 8
+Hit Rate          : 1.000
+Precision@5       : 0.200
+Recall            : 1.000
